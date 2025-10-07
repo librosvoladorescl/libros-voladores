@@ -1,0 +1,79 @@
+:root{
+  --bg:#CFEAFA;
+  --accent:#123944;
+  --yellow:#FFD54F;
+  --muted:#163a4a;
+  --card:#ffffffcc;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:0; color:var(--muted); background:var(--bg); min-height:100vh; overflow-x:hidden}
+.bg-svg{position:fixed; inset:0; pointer-events:none; z-index:0}
+.bg-svg svg{fill:#fff; opacity:0.95}
+.cloud{position:absolute}
+.cloud.c1{width:520px; left:-8%; top:8%; animation:cloudMove 28s linear infinite}
+.cloud.c2{width:360px; right:6%; top:6%; animation:cloudMove 22s linear infinite reverse}
+.cloud.c3{width:240px; left:12%; top:50%; animation:cloudMove 30s linear infinite}
+.balloon{position:absolute; right:6%; top:22%; width:120px; opacity:0.95; transform-origin:center; animation:balloonFloat 6s ease-in-out infinite}
+
+.site-header{position:sticky; top:0; z-index:6; background:transparent; padding:18px 20px}
+.header-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px}
+.brand .logo{height:64px}
+.main-nav{display:flex; gap:28px; justify-content:center; flex:1}
+.main-nav a{color:var(--muted); text-decoration:none; font-weight:700}
+.header-right{min-width:300px; display:flex; justify-content:flex-end}
+.cta{background:var(--yellow); padding:10px 16px; border-radius:14px; text-decoration:none; color:#123; font-weight:800; box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+
+.hero{padding:120px 20px 40px; position:relative; z-index:2}
+.hero-inner{max-width:1200px; margin:0 auto; text-align:left}
+.hero h1{font-size:clamp(36px,7vw,76px); margin:0 0 12px; color:var(--accent); line-height:0.95; font-weight:800}
+.lead{font-size:18px; margin:0 0 22px}
+.hero-actions .btn{display:inline-block; padding:14px 22px; border-radius:16px; text-decoration:none}
+.btn-primary{background:var(--yellow); color:var(--accent); font-weight:800; box-shadow:0 8px 20px rgba(14,30,40,0.06)}
+
+.what-we-buy{max-width:1100px; margin:60px auto; padding:0 20px; text-align:center; z-index:2}
+.what-we-buy h2{font-size:36px; margin-bottom:6px; color:var(--accent)}
+.subtitle{color:var(--muted); margin-bottom:18px}
+.carousel{display:flex; align-items:center; gap:12px; justify-content:center}
+.cards{display:flex; gap:22px; align-items:center; transition:transform 350ms ease}
+.card{background:var(--card); padding:20px; border-radius:18px; width:200px; box-shadow:0 14px 36px rgba(20,60,80,0.06); display:flex; flex-direction:column; align-items:center}
+.card img{width:130px; height:160px; object-fit:cover; border-radius:8px}
+.card span{display:block; margin-top:10px; font-weight:800; color:var(--accent)}
+.arrow{background:transparent; border:0; font-size:28px; color:var(--accent)}
+
+.how-it-works{max-width:900px; margin:60px auto; padding:20px; text-align:center; z-index:2}
+.how-it-works h2{font-size:30px; color:var(--accent)}
+.how-inner{display:flex; justify-content:center; gap:18px; margin-top:18px}
+.how-item{background:var(--card); padding:18px 22px; border-radius:12px; display:flex; align-items:center; gap:12px; box-shadow:0 10px 30px rgba(10,10,10,0.06)}
+.how-item svg{width:40px; height:40px}
+
+.mobile-wa{display:none}
+
+.site-footer{margin-top:60px; padding:26px 20px; background:transparent; z-index:2}
+.footer-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px}
+.footer-inner p{margin:0}
+.socials a{margin-left:10px; text-decoration:none; color:var(--muted)}
+.icon-social{width:28px; height:28px}
+
+@keyframes cloudMove{
+  0%{transform:translateX(0)}
+  50%{transform:translateX(6%)}
+  100%{transform:translateX(0)}
+}
+@keyframes balloonFloat{
+  0%{transform:translateY(0) rotate(-2deg)}
+  50%{transform:translateY(-8px) rotate(2deg)}
+  100%{transform:translateY(0) rotate(-2deg)}
+}
+
+@media (max-width:900px){
+  .main-nav{display:none}
+  .brand .logo{height:46px}
+  .hero-inner{text-align:center}
+  .book{display:none}
+  .cloud{display:none}
+  .cards{gap:12px}
+  .card{width:150px}
+  .hero{padding:60px 14px}
+  .mobile-wa{display:block; position:fixed; left:12px; right:12px; bottom:18px; background:var(--yellow); color:#123; text-align:center; padding:14px 18px; border-radius:12px; font-weight:800; z-index:9999; box-shadow:0 8px 20px rgba(14,30,40,0.12)}
+}

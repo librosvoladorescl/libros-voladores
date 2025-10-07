@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="320" viewBox="0 0 240 320">
+  <rect width="240" height="320" rx="16" fill="#F6F9FF"/>
+  <rect x="28" y="36" width="184" height="220" rx="12" fill="#E6F7EA"/>
+  <text x="50%" y="280" text-anchor="middle" font-family="Inter, Arial" font-size="18" fill="#123944">En el bosque</text>
+</svg>
